@@ -2,172 +2,243 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Taynara | APIs e Automação</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taynara | Desenvolvedora de APIs e Automação</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
   <style>
+    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
-
     body {
-      background-color: #121212;
-      color: #e0e0e0;
-      padding: 2rem 1.5rem;
+      background: linear-gradient(135deg, #121212, #1e1e2f);
+      color: #ddd;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
       max-width: 960px;
       margin: 0 auto;
       line-height: 1.6;
     }
 
+    /* Header */
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
+      font-family: 'Poppins', sans-serif;
     }
-
-    header img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 2px solid #8e52ff;
-      margin-bottom: 1rem;
-    }
-
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #8e52ff;
-      font-weight: 700;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 0.25rem;
+      user-select: none;
     }
-
     header p {
-      font-size: 1.1rem;
+      font-weight: 300;
+      font-size: 1.2rem;
       color: #aaa;
-      margin-top: 0.5rem;
-    }
-
-    .about-me {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .about-me p {
-      color: #ccc;
-      font-size: 1rem;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
     }
 
+    /* Foto / Logo */
+    .about-me {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .about-me img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #8e52ff;
+      box-shadow: 0 0 15px #8e52ff88;
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    .about-me p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+
+    /* Cards Glassmorphism */
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      gap: 2rem;
+      margin-bottom: 4rem;
     }
-
     .card {
-      background-color: #1d1d1d;
-      padding: 1.5rem;
-      border-radius: 14px;
-      box-shadow: 0 2px 6px rgba(142, 82, 255, 0.15);
+      background: rgba(30, 30, 45, 0.6);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      border: 1px solid #8e52ff44;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(142, 82, 255, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(142, 82, 255, 0.25);
-    }
-
-    .card h2 {
-      font-size: 1.2rem;
-      color: #ff66c4;
-      margin-bottom: 1rem;
-    }
-
-    .card p {
-      color: #ccc;
-      margin: 0.3rem 0;
-    }
-
-    .lang-list {
-      margin-top: 3rem;
-      text-align: center;
-    }
-
-    .lang-list h2 {
-      color: #52d1dc;
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-    }
-
-    .tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tag {
-      background: #222;
-      border: 1px solid #333;
-      padding: 0.4rem 0.9rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .tag:hover {
-      background-color: #8e52ff;
-      color: #fff;
       cursor: default;
+      color: #eee;
+      user-select: none;
     }
-
-    footer {
-      margin-top: 4rem;
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 40px #8e52ffaa;
+    }
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ff6ee7;
+      margin-bottom: 1.2rem;
+      user-select: text;
+    }
+    .card p {
+      margin: 0.5rem 0;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: text;
+    }
+    .card p strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .card p i {
+      color: #ff6ee7;
+      min-width: 18px;
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
     }
 
+    /* Tecnologias */
+    .lang-list {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .lang-list h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #52d1dc;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    .tags {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .tag {
+      background: #2b2b3d;
+      border: 1.5px solid #52d1dc;
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #52d1dc;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    .tag:hover {
+      background-color: #52d1dc;
+      color: #121212;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #777;
+      margin-top: 2rem;
+      user-select: none;
+    }
     footer a {
       color: #8e52ff;
       text-decoration: none;
-      margin: 0 0.5rem;
+      margin: 0 0.6rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #ff6ee7;
+      text-decoration: underline;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    /* Responsividade */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .about-me img {
+        width: 110px;
+        height: 110px;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      .card h2 {
+        font-size: 1.3rem;
+      }
+      .tag {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="https://avatars.githubusercontent.com/gitTaynara4x4" alt="Foto de Taynara">
-    <h1>@gitTaynara4x4</h1>
-    <p>Desenvolvedora de APIs e automações com foco em Bitrix24, n8n, e integração de sistemas.</p>
+  <header data-aos="fade-down">
+    <h1>Taynara, dev de APIs & Automação</h1>
+    <p>Desenvolvedora focada em APIs, automações e integração com plataformas como Bitrix24, n8n e mais.</p>
   </header>
 
-  <section class="about-me">
-    <p>Sou uma desenvolvedora apaixonada por resolver problemas com código. Meu foco principal está em automações com n8n, integrações via API REST e plataformas como Bitrix24. Tenho experiência sólida com JavaScript, Python, bancos de dados e sistemas de automação de fluxos.</p>
+  <section class="about-me" data-aos="fade-up" data-aos-delay="100">
+    <img
+      src="https://avatars.githubusercontent.com/gitTaynara4x4"
+      alt="Foto de Taynara"
+      loading="lazy"
+    />
+    <p>
+      Sou uma desenvolvedora apaixonada por resolver problemas com código.
+      Meu foco principal está em automações com n8n, integrações via API REST e
+      plataformas como Bitrix24. Tenho experiência sólida com JavaScript, Python,
+      bancos de dados e sistemas de automação de fluxos.
+    </p>
   </section>
 
-  <section class="stats">
+  <section class="stats" data-aos="fade-up" data-aos-delay="200">
     <div class="card">
-      <h2>📈 GitHub Stats</h2>
-      <p>⭐ Stars: <strong>1</strong></p>
-      <p>🕒 Commits (2025): <strong>425</strong></p>
-      <p>🔃 Pull Requests: <strong>2</strong></p>
-      <p>📂 Issues: <strong>0</strong></p>
-      <p>🗓 Último ano: <strong>2 contribuições</strong></p>
-      <p>📊 Nota: <strong>C+</strong></p>
+      <h2><i class="fas fa-star"></i> Estatísticas do GitHub</h2>
+      <p><i class="fas fa-star"></i> Total de Stars: <strong>1</strong></p>
+      <p><i class="fas fa-clock"></i> Commits (2025): <strong>425</strong></p>
+      <p><i class="fas fa-code-branch"></i> Pull Requests: <strong>2</strong></p>
+      <p><i class="fas fa-exclamation-circle"></i> Issues: <strong>0</strong></p>
+      <p><i class="fas fa-calendar-alt"></i> Contribuições (último ano): <strong>2</strong></p>
+      <p><i class="fas fa-chart-line"></i> Nota geral: <strong>C+</strong></p>
     </div>
   </section>
 
-  <section class="lang-list">
+  <section class="lang-list" data-aos="fade-up" data-aos-delay="300">
     <h2>💻 Tecnologias que utilizo</h2>
     <div class="tags">
       <span class="tag">Python</span>
@@ -181,14 +252,21 @@
     </div>
   </section>
 
-  <footer>
-    <p>Feito com 💜 por Taynara</p>
+  <footer data-aos="fade-up" data-aos-delay="400">
     <p>
-      <a href="https://github.com/gitTaynara4x4" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/gitTaynara4x4" target="_blank" rel="noopener noreferrer">GitHub</a> |
+      <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
       <a href="mailto:seuemail@exemplo.com">Email</a>
     </p>
   </footer>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out',
+    });
+  </script>
 </body>
 </html>
