@@ -3,17 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Taynara Silva | Desenvolvedora Back-End</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Taynara Silva | Portfólio Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0f0f0f;
-      --text: #e5e5e5;
-      --accent: #8e52ff;
-      --soft: #1a1a1a;
-      --border: #2a2a2a;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -22,107 +14,121 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      padding: 2rem;
     }
 
     header {
-      text-align: left;
-      margin-bottom: 50px;
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
-    header h1 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      color: #fff;
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px #00000050;
     }
 
-    header p {
-      font-size: 1.1rem;
-      color: #bbb;
-      max-width: 600px;
-      margin-top: 10px;
+    h1 {
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
     }
 
-    section {
-      margin-bottom: 40px;
+    p.subtitulo {
+      font-size: 1.05rem;
+      color: #aaa;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
 
     .card {
-      background: var(--soft);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      color: #8e52ff;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
     }
 
     .card p {
-      margin: 8px 0;
       color: #ccc;
+      font-size: 0.95rem;
+      margin: 0.3rem 0;
+    }
+
+    .lang-list {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .lang-list h2 {
+      color: #52d1dc;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .tags {
       display: flex;
+      justify-content: center;
+      gap: 0.7rem;
       flex-wrap: wrap;
-      gap: 10px;
     }
 
     .tag {
-      background: #1f1f1f;
-      border: 1px solid #333;
-      color: #ccc;
-      padding: 6px 14px;
+      background: #222;
+      border: 1px solid #444;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
       font-size: 0.9rem;
+      color: #fff;
+      transition: background 0.3s ease;
     }
 
-    .contato a {
-      display: inline-block;
-      margin-right: 20px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .contato a:hover {
-      color: #b586ff;
+    .tag:hover {
+      background: #333;
     }
 
     footer {
+      margin-top: 4rem;
       text-align: center;
       font-size: 0.9rem;
       color: #666;
-      border-top: 1px solid var(--border);
-      padding-top: 30px;
-      margin-top: 60px;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        width: 100%;
       }
 
       .tag {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-      }
-
-      .contato a {
-        display: block;
-        margin-bottom: 10px;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -130,56 +136,39 @@
 <body>
 
   <header>
+    <img src="https://avatars.githubusercontent.com/u/117669557?v=4" alt="Logo de Taynara Silva" class="logo">
     <h1>Taynara Silva</h1>
-    <p>Desenvolvedora back-end especializada em automações, integrações com Bitrix24 e criação de APIs REST. Soluções sob medida para negócios digitais.</p>
+    <p class="subtitulo">Desenvolvedora especializada em APIs, automações e integrações com plataformas como Bitrix24, n8n e outras soluções empresariais.</p>
   </header>
 
-  <section>
-    <h2>🔧 Serviços</h2>
+  <div class="stats">
     <div class="card">
-      <p>✔️ Integrações com Bitrix24 (formulários, CRM, negócios)</p>
-      <p>✔️ Automações com n8n (envio de leads, notificações, relatórios)</p>
-      <p>✔️ Desenvolvimento de APIs RESTful seguras e escaláveis</p>
-      <p>✔️ Scripts personalizados e otimização de processos</p>
+      <h2>Estatísticas do GitHub</h2>
+      <p>⭐ Total de Stars: <strong>1</strong></p>
+      <p>🕒 Commits (2025): <strong>425</strong></p>
+      <p>🔃 Pull Requests: <strong>2</strong></p>
+      <p>📂 Issues: <strong>0</strong></p>
+      <p>🗓 Contribuições (último ano): <strong>2</strong></p>
+      <p>📊 Nota geral: <strong>C+</strong></p>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>💻 Tecnologias</h2>
+  <div class="lang-list">
+    <h2>💻 Tecnologias e Ferramentas</h2>
     <div class="tags">
       <span class="tag">Python</span>
       <span class="tag">JavaScript</span>
       <span class="tag">n8n</span>
       <span class="tag">Bitrix24</span>
-      <span class="tag">PostgreSQL</span>
       <span class="tag">HTML</span>
       <span class="tag">CSS</span>
+      <span class="tag">PostgreSQL</span>
       <span class="tag">APIs REST</span>
     </div>
-  </section>
-
-  <section>
-    <h2>📈 GitHub em Números</h2>
-    <div class="card">
-      <p><strong>Commits em 2025:</strong> 425</p>
-      <p><strong>Pull Requests:</strong> 2</p>
-      <p><strong>Issues abertas:</strong> 0</p>
-      <p><strong>Contribuições no último ano:</strong> 2</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>📬 Contato</h2>
-    <p>Entre em contato para consultorias, integrações ou desenvolvimento de projetos sob demanda:</p>
-    <div class="contato">
-      <a href="mailto:contato@seudominio.com">contato@seudominio.com</a>
-      <a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a>
-      <a href="https://github.com/gitTaynara4x4" target="_blank">GitHub</a>
-    </div>
-  </section>
+  </div>
 
   <footer>
-    <p>© 2025 Taynara Silva — Todos os direitos reservados</p>
+    <p>&copy; 2025 Taynara Silva. Todos os direitos reservados.</p>
   </footer>
 
 </body>
