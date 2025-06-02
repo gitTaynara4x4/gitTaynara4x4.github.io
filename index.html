@@ -1,147 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taynara | Dev Backend & Automações</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>gitTaynara4x4 | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      padding: 2rem;
       line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 3rem 1rem;
-      background-color: #1f1f1f;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0;
-      color: #67d4ff;
+      color: #8e52ff;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    .skills, .projects {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #ff79c6;
-    }
-
-    .skills ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skills li {
-      background-color: #2a2a2a;
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      color: #ffffff;
-    }
-
-    .project-card {
-      background-color: #1e1e1e;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #8be9fd;
-    }
-
-    .project-card p {
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1f1f1f;
+      font-size: 1.1rem;
       color: #aaa;
     }
 
-    footer a {
-      color: #67d4ff;
-      text-decoration: none;
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .card {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 0 15px #00000050;
     }
 
-    @media (max-width: 600px) {
-      .skills ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .card h2 {
+      font-size: 1.2rem;
+      color: #ff66c4;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      margin: 0.3rem 0;
+      color: #ccc;
+    }
+
+    .lang-list {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .lang-list h2 {
+      color: #52d1dc;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #222;
+      border: 1px solid #444;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Taynara</h1>
-    <p>Desenvolvedora Backend & Especialista em Automações</p>
+    <h1>@gitTaynara4x4</h1>
+    <p>Desenvolvedora focada em APIs, automações e integração com plataformas como Bitrix24, n8n e mais.</p>
   </header>
 
-  <section class="skills">
-    <h2>🛠️ Habilidades</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>Node.js</li>
-      <li>n8n</li>
-      <li>Bitrix24 API</li>
-      <li>PostgreSQL</li>
-      <li>HTML & CSS</li>
-      <li>Shell Script</li>
-      <li>Linux (Rocky, Ubuntu)</li>
-    </ul>
-  </section>
+  <div class="stats">
+    <div class="card">
+      <h2>Estatísticas do GitHub</h2>
+      <p>⭐ Total de Stars: <strong>1</strong></p>
+      <p>🕒 Commits (2025): <strong>425</strong></p>
+      <p>🔃 Pull Requests: <strong>2</strong></p>
+      <p>📂 Issues: <strong>0</strong></p>
+      <p>🗓 Contribuições (último ano): <strong>2</strong></p>
+      <p>📊 Nota geral: <strong>C+</strong></p>
+    </div>
+  </div>
 
-  <section class="projects">
-    <h2>✨ Projetos em Destaque</h2>
-    <div class="project-card">
-      <h3>🔄 Integração Bitrix24 + n8n</h3>
-      <p>Automatização de leitura de PDFs com QR Code e geração de Pix. Cache local, envio via WhatsApp.</p>
+  <div class="lang-list">
+    <h2>💻 Tecnologias que utilizo</h2>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">n8n</span>
+      <span class="tag">Bitrix24</span>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">APIs REST</span>
     </div>
-    <div class="project-card">
-      <h3>📦 API de Boletos com Pix</h3>
-      <p>API leve e eficiente para criação de cobranças Pix com Copia e Cola.</p>
-    </div>
-    <div class="project-card">
-      <h3>🧰 Scripts de Backend</h3>
-      <p>Scripts utilitários para automação, envio de dados e integrações entre sistemas.</p>
-    </div>
-  </section>
+  </div>
 
   <footer>
-    <p>🌐 <a href="https://github.com/gitTaynara4x4" target="_blank">GitHub</a> |
-       <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">LinkedIn</a> |
-       <a href="mailto:seu@email.com">Email</a></p>
+    <p>Feito com 💜 por Taynara</p>
   </footer>
 </body>
 </html>
