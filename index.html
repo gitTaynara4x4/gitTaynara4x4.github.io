@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Taynara | Desenvolvedora de APIs e Automações</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Taynara Silva | Desenvolvedora Back-End</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #e5e5e5;
+      --accent: #8e52ff;
+      --soft: #1a1a1a;
+      --border: #2a2a2a;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,28 +22,30 @@
     }
 
     body {
-      background-color: #0e0e0e;
-      color: #e4e4e4;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 960px;
       margin: auto;
     }
 
     header {
-      margin-bottom: 40px;
+      text-align: left;
+      margin-bottom: 50px;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #ffffff;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #fff;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #bbbbbb;
+      font-size: 1.1rem;
+      color: #bbb;
+      max-width: 600px;
       margin-top: 10px;
-      max-width: 700px;
     }
 
     section {
@@ -43,22 +53,23 @@
     }
 
     h2 {
-      font-size: 1.6rem;
-      color: #8e52ff;
+      font-size: 1.5rem;
+      color: var(--accent);
       margin-bottom: 20px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
       padding-bottom: 10px;
     }
 
     .card {
-      background: #1a1a1a;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 20px;
-      border-radius: 10px;
       margin-bottom: 20px;
     }
 
     .card p {
-      margin: 6px 0;
+      margin: 8px 0;
       color: #ccc;
     }
 
@@ -69,34 +80,50 @@
     }
 
     .tag {
-      background-color: #222;
-      border: 1px solid #444;
+      background: #1f1f1f;
+      border: 1px solid #333;
+      color: #ccc;
       padding: 6px 14px;
       border-radius: 6px;
       font-size: 0.9rem;
-      color: #ccc;
+    }
+
+    .contato a {
+      display: inline-block;
+      margin-right: 20px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contato a:hover {
+      color: #b586ff;
     }
 
     footer {
       text-align: center;
-      margin-top: 60px;
       font-size: 0.9rem;
       color: #666;
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+      margin-top: 60px;
     }
 
-    .contato {
-      margin-top: 20px;
-    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
 
-    .contato a {
-      color: #8e52ff;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: 500;
-    }
+      .tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+      }
 
-    .contato a:hover {
-      text-decoration: underline;
+      .contato a {
+        display: block;
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
@@ -104,51 +131,51 @@
 
   <header>
     <h1>Taynara Silva</h1>
-    <p>Desenvolvedora especializada em APIs, automações e integrações com Bitrix24, n8n, bancos de dados e sistemas personalizados. Transformo processos manuais em soluções automatizadas.</p>
+    <p>Desenvolvedora back-end especializada em automações, integrações com Bitrix24 e criação de APIs REST. Soluções sob medida para negócios digitais.</p>
   </header>
 
   <section>
-    <h2>Serviços que ofereço</h2>
+    <h2>🔧 Serviços</h2>
     <div class="card">
-      <p>✔️ Integrações completas com Bitrix24 (negócios, formulários, CRM)</p>
-      <p>✔️ Criação de fluxos no n8n (envio de leads, automações, notificações)</p>
-      <p>✔️ Desenvolvimento de APIs REST e Webhooks personalizados</p>
-      <p>✔️ Consultoria técnica e soluções sob demanda</p>
+      <p>✔️ Integrações com Bitrix24 (formulários, CRM, negócios)</p>
+      <p>✔️ Automações com n8n (envio de leads, notificações, relatórios)</p>
+      <p>✔️ Desenvolvimento de APIs RESTful seguras e escaláveis</p>
+      <p>✔️ Scripts personalizados e otimização de processos</p>
     </div>
   </section>
 
   <section>
-    <h2>Minhas tecnologias principais</h2>
+    <h2>💻 Tecnologias</h2>
     <div class="tags">
       <span class="tag">Python</span>
       <span class="tag">JavaScript</span>
       <span class="tag">n8n</span>
       <span class="tag">Bitrix24</span>
+      <span class="tag">PostgreSQL</span>
       <span class="tag">HTML</span>
       <span class="tag">CSS</span>
-      <span class="tag">PostgreSQL</span>
       <span class="tag">APIs REST</span>
     </div>
   </section>
 
   <section>
-    <h2>Alguns números</h2>
+    <h2>📈 GitHub em Números</h2>
     <div class="card">
       <p><strong>Commits em 2025:</strong> 425</p>
       <p><strong>Pull Requests:</strong> 2</p>
       <p><strong>Issues abertas:</strong> 0</p>
-      <p><strong>Contribuições (últimos 12 meses):</strong> 2</p>
+      <p><strong>Contribuições no último ano:</strong> 2</p>
     </div>
   </section>
 
-  <section class="contato">
-    <h2>Contato</h2>
-    <p>Disponível para projetos, parcerias e consultorias técnicas.</p>
-    <p class="contato">
+  <section>
+    <h2>📬 Contato</h2>
+    <p>Entre em contato para consultorias, integrações ou desenvolvimento de projetos sob demanda:</p>
+    <div class="contato">
       <a href="mailto:contato@seudominio.com">contato@seudominio.com</a>
       <a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a>
       <a href="https://github.com/gitTaynara4x4" target="_blank">GitHub</a>
-    </p>
+    </div>
   </section>
 
   <footer>
